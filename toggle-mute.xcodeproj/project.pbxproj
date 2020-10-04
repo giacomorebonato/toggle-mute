@@ -14,6 +14,7 @@
 		CA5D0151252A39CD0052A2E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA5D014F252A39CD0052A2E3 /* Main.storyboard */; };
 		CA5D015D252A39CD0052A2E3 /* toggle_muteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5D015C252A39CD0052A2E3 /* toggle_muteTests.swift */; };
 		CA5D0168252A39CD0052A2E3 /* toggle_muteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5D0167252A39CD0052A2E3 /* toggle_muteUITests.swift */; };
+		CA5D0177252A3A5A0052A2E3 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5D0176252A3A5A0052A2E3 /* StatusBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		CA5D0163252A39CD0052A2E3 /* toggle-muteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "toggle-muteUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA5D0167252A39CD0052A2E3 /* toggle_muteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toggle_muteUITests.swift; sourceTree = "<group>"; };
 		CA5D0169252A39CD0052A2E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA5D0176252A3A5A0052A2E3 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 		CA5D0145252A39CB0052A2E3 /* toggle-mute */ = {
 			isa = PBXGroup;
 			children = (
+				CA5D0175252A3A380052A2E3 /* Components */,
 				CA5D0146252A39CB0052A2E3 /* AppDelegate.swift */,
 				CA5D0148252A39CB0052A2E3 /* ContentView.swift */,
 				CA5D014A252A39CD0052A2E3 /* Assets.xcassets */,
@@ -133,6 +136,14 @@
 				CA5D0169252A39CD0052A2E3 /* Info.plist */,
 			);
 			path = "toggle-muteUITests";
+			sourceTree = "<group>";
+		};
+		CA5D0175252A3A380052A2E3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CA5D0176252A3A5A0052A2E3 /* StatusBarController.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA5D0149252A39CB0052A2E3 /* ContentView.swift in Sources */,
+				CA5D0177252A3A5A0052A2E3 /* StatusBarController.swift in Sources */,
 				CA5D0147252A39CB0052A2E3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
