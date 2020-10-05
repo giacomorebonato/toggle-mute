@@ -34,5 +34,7 @@
 	<true/>
 	<key>LSUIElement</key>
 	<true/>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Manage microphone input</string>
 </dict>
 </plist>

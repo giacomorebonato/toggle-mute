@@ -1,13 +1,7 @@
-//
-//  AppDelegate.swift
-//  toggle-mute
-//
-//  Created by Giacomo Rebonato on 10/4/20.
-//  Copyright © 2020 Giacomo Rebonato. All rights reserved.
-//
-
 import Cocoa
 import SwiftUI
+import AudioToolbox
+import AVKit
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -24,6 +18,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // Create the Status Bar Item with the above Popover
         statusBar = StatusBarController.init(popover)
+        
+        switch AVCaptureDevice.authorizationStatus(for: .audio) {
+            case .notDetermined: // The user has not yet been asked for camera access.
+                AVCaptureDevice.requestAccess(for: .audio) { granted in
+                    if !granted {
+                        NSLog("Can't get access to the mic.")
+                        exit(1)
+                    }
+                }
+            
+            case .denied: // The user has previously denied access.
+                fallthrough
+            case .restricted: // The user can't grant access due to restrictions.
+                NSLog("Can't get access to the mic.")
+                exit(1)
+            default:
+                print("Already has permission");
+        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
